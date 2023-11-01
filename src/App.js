@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './resources/styles.css';
 
-function App() {
+import Header from "./components/header_footer/Header";
+import { red } from "@mui/material/colors";
+import Footer from "./components/header_footer/Footer";
+import Featured from "./components/featured";
+
+const App = () =>{
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Header/>
+      <>
+      <Featured/>
+      </>
+      <div style={{backgroundColor: 'red', height: '800px'}}></div>
+      <div style={{backgroundColor: 'green', height: '800px'}}></div>
+      <div style={{backgroundColor: 'blue', height: '800px'}}></div>
+      <div style={{backgroundColor: 'yellow', height: '800px'}}></div>
+      <div style={{backgroundColor: 'puple', height: '800px'}}></div>
+
+      <Footer/>
+
+
     </div>
   );
 }
